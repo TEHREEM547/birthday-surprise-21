@@ -1,0 +1,271 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #590d22, #a4133c, #ff4d6d);
+    font-family: Georgia, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.container {
+    width: 850px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.container h1 {
+    color: #ffe5ec;
+    font-size: 32px;
+    text-shadow: 2px 2px 5px #400010;
+}
+
+.subtitle {
+    color: white;
+    margin: 12px 0 30px;
+    font-size: 17px;
+}
+
+.main-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: rgba(255,255,255,0.12);
+    padding: 30px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.4);
+}
+
+/* Birthday Card */
+
+.birthday-card {
+    width: 300px;
+    min-height: 390px;
+    background: #fff0f3;
+    padding: 15px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.birthday-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid #ff8fa3;
+}
+
+.ribbon {
+    position: absolute;
+    top: -18px;
+    left: -15px;
+    font-size: 45px;
+}
+
+.birthday-card h2 {
+    color: #c9184a;
+    margin-top: 12px;
+    font-size: 25px;
+}
+
+.birthday-card p {
+    color: #ff4d6d;
+    margin-top: 5px;
+}
+
+.hearts {
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+/* Password Section */
+
+.password-section {
+    width: 300px;
+    color: white;
+}
+
+.password-section h2 {
+    font-size: 27px;
+    color: #ffe5ec;
+    margin-bottom: 10px;
+}
+
+.password-section p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.password-display {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.password-display span {
+    width: 42px;
+    height: 42px;
+    background: #fff0f3;
+    color: #c9184a;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    box-shadow: 0 3px 8px #570818;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    width: 230px;
+    margin: auto;
+}
+
+.keypad button {
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #fff0f3;
+    color: #c9184a;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.keypad button:hover {
+    background: #ff8fa3;
+    color: white;
+    transform: scale(1.12);
+}
+
+.keypad .clear {
+    background: #ffb3c1;
+}
+
+.keypad .delete {
+    background: #ffb3c1;
+}
+
+.unlock-btn {
+    margin-top: 25px;
+    width: 200px;
+    padding: 13px;
+    border: none;
+    border-radius: 30px;
+    background: #ff8fa3;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.unlock-btn:hover {
+    background: #fff0f3;
+    color: #c9184a;
+    transform: scale(1.05);
+}
+
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ffe5ec;
+}
+
+/* Surprise Popup */
+
+.surprise {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 10;
+}
+
+.surprise-content {
+    background: #fff0f3;
+    padding: 40px 25px;
+    border-radius: 20px;
+    text-align: center;
+    width: 400px;
+    max-width: 100%;
+    box-shadow: 0 0 30px #ff8fa3;
+    animation: pop 0.5s ease;
+}
+
+.surprise-content h1 {
+    color: #c9184a;
+    margin-bottom: 15px;
+}
+
+.surprise-content h2 {
+    color: #ff4d6d;
+    margin-bottom: 15px;
+}
+
+.surprise-content p {
+    color: #590d22;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.surprise-content a {
+    background: #c9184a;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Mobile Responsive */
+
+@media(max-width: 650px) {
+
+    .main-box {
+        flex-direction: column;
+        padding: 25px 15px;
+    }
+
+    .birthday-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .password-section {
+        width: 100%;
+    }
+
+    .container h1 {
+        font-size: 25px;
+    }
+}

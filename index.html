@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise ❤️</title>
+    <link rel="stylesheet" href="pasword.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>🎂 Birthday Surprise 🎂</h1>
+        <p class="subtitle">A Special Surprise Just For You ❤️</p>
+
+        <div class="main-box">
+
+            <!-- Left Birthday Card -->
+            <div class="birthday-card">
+
+                <div class="ribbon">🎀</div>
+
+                <img src="images/img 4.jpg" alt="Birthday Picture">
+
+                <h2>Happy Birthday!</h2>
+                <p>To My Special Person ❤️</p>
+
+                <div class="hearts">💗 💕 💖</div>
+
+            </div>
+
+            <!-- Right Password Section -->
+            <div class="password-section">
+
+                <h2>Enter Password</h2>
+                <p>Unlock Your Birthday Surprise!</p>
+
+                <div class="password-display">
+                    <span id="dot1">○</span>
+                    <span id="dot2">○</span>
+                    <span id="dot3">○</span>
+                    <span id="dot4">○</span>
+                </div>
+
+                <div class="keypad">
+
+                    <button onclick="pressNumber('1')">1</button>
+                    <button onclick="pressNumber('2')">2</button>
+                    <button onclick="pressNumber('3')">3</button>
+
+                    <button onclick="pressNumber('4')">4</button>
+                    <button onclick="pressNumber('5')">5</button>
+                    <button onclick="pressNumber('6')">6</button>
+
+                    <button onclick="pressNumber('7')">7</button>
+                    <button onclick="pressNumber('8')">8</button>
+                    <button onclick="pressNumber('9')">9</button>
+
+                    <button class="clear" onclick="clearPassword()">C</button>
+                    <button onclick="pressNumber('0')">0</button>
+                    <button class="delete" onclick="deleteNumber()">⌫</button>
+
+                </div>
+
+                <button class="unlock-btn" onclick="checkPassword()">
+                    Unlock ❤️
+                </button>
+
+                <p id="message"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Birthday Surprise -->
+    <div class="surprise" id="surprise">
+
+        <div class="surprise-content">
+            <h1>🎉 Happy Birthday! 🎉</h1>
+            <h2>My Special Person ❤️</h2>
+
+            <p>
+                May your birthday be filled with happiness,
+                love, laughter and beautiful memories.
+                You are truly special! 💖
+            </p>
+
+            <h1>🎂 🎁 💐</h1>
+
+            <!-- <button <a href="index.html" class="btn">
+                 OPEN 
+            </a></button> -->
+            <a href="page2.html" class="btn">
+                 OPEN 
+            </a>
+        </div>
+
+    </div>
+
+    <script src="pasword.js"></script>
+
+</body>
+</html>
